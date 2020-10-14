@@ -1,0 +1,214 @@
+body {
+  background-color: rgb(235, 235, 235);
+}
+.projects {
+  margin: 0;
+  max-width: 100%;
+  font-family: "Reem Kufi", sans-serif;
+  background-color: rgb(235, 235, 235);
+  color: rgb(51, 51, 51);
+  @media only screen and (max-width: 760px) {
+    margin-top: 8rem;
+  }
+
+  .main-title {
+    width: 95%;
+    margin: auto;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    align-self: center;
+    display: flex;
+
+    h1 {
+      margin: auto;
+    }
+    @media only screen and (max-width: 760px) {
+      h1 {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .portfolio-list {
+    background-color: rgb(235, 235, 235);
+    max-width: 95%;
+    min-height: 67.3vh;
+    cursor: pointer;
+    margin: auto;
+    @media only screen and (max-width: 760px) {
+      min-height: 70vh;
+    }
+
+    .portfolio-item {
+      list-style: none;
+      border-top: rgb(51, 51, 51) solid 0.1px;
+      position: relative;
+      transition: background-color 300ms ease;
+      transition-property: background-color;
+      transition-duration: 300ms;
+      transition-timing-function: ease;
+      transition-delay: 0s;
+      overflow: hidden;
+      overflow-x: hidden;
+      overflow-y: hidden;
+
+      .container {
+        min-height: 15vh;
+        display: flex;
+        justify-content: center;
+        transition: color 300ms ease;
+        transition-property: color;
+        transition-duration: 300ms;
+        transition-timing-function: ease;
+        transition-delay: 0s;
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          z-index: -1;
+          width: 100%;
+          height: 100%;
+          transform: translate3d(0, -50px, 0);
+          opacity: 0;
+          transition: transform 500ms ease, opacity 500ms ease;
+          transition-property: transform, opacity;
+          transition-duration: 500ms, 500ms;
+          transition-timing-function: ease, ease;
+          transition-delay: 0s, 0s;
+        }
+
+        &:hover .item-type {
+          opacity: 1;
+          transform: translate3d(0, 0, 0);
+        }
+        &:hover .item-year {
+          opacity: 1;
+          transform: translate3d(0, 0, 0);
+        }
+        &:hover .item-icon {
+          opacity: 1;
+          transform: translate3d(0, 0, 0);
+        }
+
+        .item-name {
+          transition: color 300ms ease;
+          transition-property: color;
+          transition-duration: 300ms;
+          transition-timing-function: ease;
+          transition-delay: 0s;
+          text-align: center;
+        }
+
+        .item-name,
+        .item-type,
+        .item-year,
+        .item-icon {
+          width: 25%;
+          display: inline-block;
+          vertical-align: top;
+          font-size: 23px;
+          margin: auto;
+          @media only screen and (max-width: 760px) {
+            font-size: 15px;
+          }
+        }
+
+        .item-type,
+        .item-year,
+        .item-icon {
+          text-transform: uppercase;
+          font-weight: 400;
+          letter-spacing: 2px;
+          text-align: center;
+          opacity: 0;
+          transform: translate3d(0, -20px, 0);
+          transition: opacity 450ms ease, transform 450ms ease;
+          transition-property: opacity, transform;
+          transition-duration: 450ms, 450ms;
+          transition-timing-function: ease, ease;
+          transition-delay: 0s, 0s;
+          font-size: 18px;
+          @media only screen and (max-width: 760px) {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    .portfolio-item1 {
+      &:hover {
+        color: rgb(51, 51, 51);
+        background-color: rgb(173, 218, 223);
+        border: solid 0.1px rgb(173, 218, 223);
+      }
+    }
+    .portfolio-item2 {
+      &:hover {
+        color: rgb(51, 51, 51);
+        background-color: rgb(173, 218, 223);
+        border: solid 0.1px rgb(173, 218, 223);
+      }
+    }
+
+    .portfolio-item3 {
+      &:hover {
+        color: rgb(51, 51, 51);
+        background-color: rgb(173, 218, 223);
+        border: solid 0.1px rgb(173, 218, 223);
+      }
+    }
+
+    .portfolio-item-bottom {
+      border-bottom: rgb(51, 51, 51) solid 0.1px;
+      &:hover {
+        color: rgb(51, 51, 51);
+        background-color: rgb(173, 218, 223);
+        border: solid 0.1px rgb(173, 218, 223);
+      }
+    }
+    @media only screen and (max-width: 760px) {
+      height: 69vh;
+    }
+  }
+
+  footer {
+    height: 8vh;
+
+    margin: auto;
+    align-items: center;
+    width: 20%;
+    min-height: 5vh;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+
+    a {
+      color: rgb(51, 51, 51);
+      .fab {
+        font-size: 25px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+    @media screen and (max-width: 992px) {
+      width: 25%;
+      a {
+        .fab {
+          font-size: 20px;
+        }
+      }
+    }
+    @media only screen and (max-width: 760px) {
+      width: 25%;
+      a {
+        .fab {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
